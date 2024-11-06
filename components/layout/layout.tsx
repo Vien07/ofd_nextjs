@@ -1,8 +1,5 @@
 import React from "react";
 import { useLockedBody } from "../hooks/useBodyLock";
-import { NavbarWrapper } from "../navbar/navbar";
-import { SidebarWrapper } from "../sidebar/sidebar";
-import { SidebarContext } from "./layout-context";
 
 interface Props {
   children: React.ReactNode;
@@ -28,10 +25,9 @@ export const Layout = ({ children }: Props) => {
     //     <NavbarWrapper>{children}</NavbarWrapper>
     //   </section>
     // </SidebarContext.Provider>
-<div className="container mx-auto p-4">
-    <h1 className="text-2xl font-bold">Welcome to My Website</h1>
-    {children}
-</div>
+    <div className="container mx-auto p-4">
+      {children}
+    </div>
 
   );
 };

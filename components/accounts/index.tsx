@@ -168,7 +168,7 @@ export const Accounts = () => {
         </div>
       </div>
       <div className="max-w-[95rem] mx-auto w-full">
-        {/* {!isFetchingAccounts ? (
+        {!isFetchingAccounts ? (
           <>
             <span className="text-default-400 text-small">
               Total {accounts.data.length} accounts
@@ -183,8 +183,7 @@ export const Accounts = () => {
           </>
         ) : (
           <LoaderTable />
-        )} */}
-        <LoaderTable />
+        )}
       </div>
     </div>
   );
