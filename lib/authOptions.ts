@@ -52,20 +52,20 @@ const authOptions: NextAuthOptions = {
   },
 
   // Callbacks are not needed temporarily, but we will keep them empty
-  callbacks: {
-    async signIn({ user, account, profile }) {
-      // Temporarily ignore signIn logic, no checks
-      return true;
-    },
-    async jwt({ token, user, trigger, session }) {
-      // Temporarily ignore JWT token modifications, allow all users
-      return token;
-    },
-    async session({ session, token }) {
-      // Temporarily allow all users in the session
-      return { ...session, user: { ...token, hasTokenLocal: token.hasTokenLocal } };
-    },
-  },
+  // callbacks: {
+  //   async signIn({ user, account, profile }) {
+  //     // Temporarily ignore signIn logic, no checks
+  //     return true;
+  //   },
+  //   async jwt({ token, user, trigger, session }) {
+  //     // Temporarily ignore JWT token modifications, allow all users
+  //     return token;
+  //   },
+  //   async session({ session, token }) {
+  //     // Temporarily allow all users in the session
+  //     return { ...session, user: { ...token, hasTokenLocal: token.hasTokenLocal } };
+  //   },
+  // },
 };
 
 export default authOptions;

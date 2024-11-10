@@ -1,6 +1,6 @@
 "use client";
 import { LoaderSpinner } from "@/components/loader/loader-spinner";
-import tokenManager from "@/config/tokenManager";
+// import tokenManager from "@/config/tokenManager";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -11,14 +11,14 @@ const GoogleCallback = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const accessToken = tokenManager.getAccessToken();
-    if (session && !accessToken) {
-        tokenManager.setTokens(session.user.access_token, session.user.refresh_token);
-        localStorage.setItem("email", session.user.userInfo.email)
-        update({ hasTokenLocal: true });
-        router.push("/");
-        toast.success("Đăng nhập thành công");
-      }
+    // const accessToken = tokenManager.getAccessToken();
+    // if (session && !accessToken) {
+    //     tokenManager.setTokens(session.user.access_token, session.user.refresh_token);
+    //     localStorage.setItem("email", session.user.userInfo.email)
+    //     update({ hasTokenLocal: true });
+    //     router.push("/");
+    //     toast.success("Đăng nhập thành công");
+    //   }
   }, [session])
 
   return <LoaderSpinner />
